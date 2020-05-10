@@ -1,21 +1,11 @@
-server:  
-  port: 8001   # HTTP port
+spring:
+  profiles:
+    active: dev
 
-logging:  
+logging:
   file:
     name: logs/${spring.application.name}.log
   level:
     com.netflix.discovery: OFF
     org.springframework.cloud: DEBUG
     com.atsistemas: DEBUG
-
-eureka:
-  client:
-    #telling the server not to register himself in the service registry
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:8001/eureka
-  server:
-    waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
-
