@@ -6,8 +6,8 @@ logging:
     name: logs/${spring.application.name}.log
   level:
     com.netflix.discovery: OFF
-    org.springframework.cloud: ERROR
-    com.atsistemas: ERROR
+    org.springframework.cloud: DEBUG
+    com.atsistemas: DEBUG
 
 eureka:
   client:
