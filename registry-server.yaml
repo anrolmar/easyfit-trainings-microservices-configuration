@@ -7,3 +7,14 @@ logging:
     com.netflix.discovery: OFF
     org.springframework.cloud: ERROR
     com.atsistemas: ERROR
+
+eureka:
+  client:
+    #telling the server not to register himself in the service registry
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
+
