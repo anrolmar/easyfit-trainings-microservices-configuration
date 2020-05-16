@@ -1,4 +1,16 @@
+spring:
+  profiles:
+    active: dev
+    
 eureka:
   client:
     service-url:
       default-zone: http://localhost:8001/eureka
+
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: OFF
+    org.springframework.cloud: DEBUG
+    com.atsistemas: DEBUG
