@@ -2,11 +2,6 @@ spring:
   profiles:
     active: dev
 
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8001/eureka
-
 logging:
   file:
     name: logs/${spring.application.name}.log
