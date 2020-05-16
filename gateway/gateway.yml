@@ -9,11 +9,14 @@ logging:
     org.springframework.cloud: ERROR
     com.atsistemas: ERROR
 
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
 zuul:
   prefix: /api
-  ribbon:
-    eureka:
-      enabled: false
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   ignored-services: '*'
 
