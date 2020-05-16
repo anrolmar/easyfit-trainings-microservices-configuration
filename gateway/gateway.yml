@@ -19,4 +19,30 @@ zuul:
   prefix: /api
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   ignored-services: '*'
+  routes:
+    workouts:
+      path: /workouts/**
+      service-id: workouts
+      strip-prefix: false
+    diet:
+      path: /diet/**
+      service-id: diet
+      strip-prefix: false
 
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: health,info,httptrace
+  endpoint:
+    health:
+      enabled: true
+    httptrace:
+      enabled: true
+    info:
+      enabled: true
+  trace:
+    http:
+      include: RESPONSE_HEADERS
+      enabled: true
