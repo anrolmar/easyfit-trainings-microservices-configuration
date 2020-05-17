@@ -12,6 +12,9 @@ zuul:
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   ignore-security-headers: true
   ignored-services: '*'
+  SendErrorFilter:
+    error:
+      disable: true
   routes:
     workouts:
       path: /workouts/**
