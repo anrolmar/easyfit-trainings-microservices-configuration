@@ -1,14 +1,6 @@
 server:
   port: 8080
 
-logging:
-  file:
-    name: logs/${spring.application.name}.log
-  level:
-    com.netflix.discovery: OFF
-    org.springframework.cloud: ERROR
-    com.atsistemas: ERROR
-
 spring:
   cloud:
     loadbalancer:
@@ -18,6 +10,7 @@ spring:
 zuul:
   prefix: /api
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  ignore-security-headers: true
   ignored-services: '*'
   routes:
     workouts:
@@ -46,3 +39,4 @@ management:
     http:
       include: RESPONSE_HEADERS
       enabled: true
+

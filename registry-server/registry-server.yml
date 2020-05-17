@@ -1,14 +1,6 @@
 server:  
   port: 8761   # HTTP port
 
-logging:  
-  file:
-    name: logs/${spring.application.name}.log
-  level:
-    com.netflix.discovery: OFF
-    org.springframework.cloud: ERROR
-    com.atsistemas: ERROR
-
 eureka:
   client:
     #telling the server not to register himself in the service registry

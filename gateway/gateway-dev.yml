@@ -9,3 +9,7 @@ logging:
     com.netflix.discovery: OFF
     org.springframework.cloud: DEBUG
     com.atsistemas: DEBUG
+
+authentication:
+  secret: development
+  issuer: https://easyfit-tracker-dev
