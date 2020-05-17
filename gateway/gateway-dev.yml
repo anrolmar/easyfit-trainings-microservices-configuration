@@ -11,5 +11,4 @@ logging:
     com.atsistemas: DEBUG
 
 authentication:
-  secret: development
-  issuer: https://easyfit-tracker-dev
+  service: http://localhost:3000/oauth
