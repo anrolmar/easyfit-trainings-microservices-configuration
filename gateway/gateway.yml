@@ -21,6 +21,10 @@ zuul:
       path: /diet/**
       service-id: diet
       strip-prefix: false
+    users:
+      path: /users/**
+      service-id: users
+      strip-prefix: false
 
 management:
   endpoints:
